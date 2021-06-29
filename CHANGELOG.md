@@ -4,6 +4,8 @@ AppEngine version, listed here to ease deployment and troubleshooting.
 ## Next Release (replace with git tag when deployed)
  * Bumped runtimeVersion to `2021.06.24`.
  * Migrated `pkg/api_builder` and most of `app/` to null-safety.
+ * NOTE: First release that includes `/help/api`.
+   TODO(deferred): request community members on announce@ to self-report API use.
 
 ## `20210622t160400-all`
  * Bumped runtimeVersion to `2021.06.21`.

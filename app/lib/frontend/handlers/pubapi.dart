@@ -328,6 +328,7 @@ class PubApi {
     return apiPackageNamesHandler(request);
   }
 
+  /// NOTE: This is a public API.
   @EndPoint.get('/api/package-name-completion-data')
   Future<Response> packageNameCompletionData(Request request) async {
     return apiPackageNameCompletionDataHandler(request);

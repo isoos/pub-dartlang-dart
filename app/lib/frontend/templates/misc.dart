@@ -12,6 +12,9 @@ import '../static_files.dart' as static_files;
 import '_cache.dart';
 import 'layout.dart';
 
+/// The content of `/doc/api.md`
+final _apiMarkdown = _readDocContent('api.md');
+
 /// The content of `/doc/policy.md`
 final _policyMarkdown = _readDocContent('policy.md');
 
@@ -53,6 +56,19 @@ String renderUnauthorizedPage({String? messageMarkdown}) {
     content,
     title: 'Authorization required',
     noIndex: true,
+  );
+}
+
+/// Renders the `doc/api.md`.
+String renderHelpApiPage() {
+  return renderLayoutPage(
+    PageType.standalone,
+    _renderStandalonePageContent(
+      contentMarkdown: _apiMarkdown,
+      sideImageUrl: static_files.staticUrls.packagesSideImage,
+    ),
+    title: 'pub.dev API',
+    canonicalUrl: '/help/api',
   );
 }
 
